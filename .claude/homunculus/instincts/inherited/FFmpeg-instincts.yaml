@@ -1,0 +1,303 @@
+# Instincts generated from https://github.com/JamesWilliam1977/FFmpeg
+# Generated: 2026-05-01T02:26:28.483Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: FFmpeg-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Commit Length
+
+## Action
+
+Keep commit messages concise (~42 characters)
+
+## Evidence
+
+- Average commit message length: 42 chars
+- Based on 4 commits
+
+---
+id: FFmpeg-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: FFmpeg-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: FFmpeg-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: FFmpeg-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: FFmpeg-workflow-update-cross-toolchain-configs
+trigger: "when doing update cross toolchain configs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/FFmpeg
+---
+
+# FFmpeg Workflow Update Cross Toolchain Configs
+
+## Action
+
+Follow the update-cross-toolchain-configs workflow:
+1. Edit ct-ng-config files for each relevant architecture under images/base-linux*/ct-ng-config.
+2. Commit changes with a message describing the toolchain update or feature enablement.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: images/base-linuxmips64/ct-ng-config, images/base-linuxppc64/ct-ng-config, images/base-linuxriscv64/ct-ng-config
+
+---
+id: ffmpeg-instinct-file-naming
+trigger: "When creating a new file in the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct File Naming
+
+## Action
+
+Name the file using kebab-case (e.g., my-new-file.ts)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: ffmpeg-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., processImage)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: ffmpeg-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., ImageProcessor)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: ffmpeg-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_SIZE)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: ffmpeg-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: ffmpeg-instinct-export-style
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: ffmpeg-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Test Location
+
+## Action
+
+Place test files in a separate folder from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: ffmpeg-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Commit Format
+
+## Action
+
+Use a concise, imperative summary describing the change (e.g., 'Enable cross-gdb for cross-only toolchains')
+
+## Evidence
+
+- Seen in commit: 'Enable cross-gdb for cross-only toolchains'
+- Seen in commit: 'Use more modern toolchain in ppc64/mips images'
+
+---
+id: ffmpeg-instinct-cross-toolchain-workflow
+trigger: "When updating or enabling features in cross-compilation toolchains for multiple architectures (e.g., mips64, ppc64, riscv64)"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/FFmpeg
+---
+
+# Ffmpeg Instinct Cross Toolchain Workflow
+
+## Action
+
+Edit ct-ng-config files for each relevant architecture under images/base-linux*/ct-ng-config and commit changes with a message describing the toolchain update or feature enablement
+
+## Evidence
+
+- Workflow: update-cross-toolchain-configs
+- Pattern in files: images/base-linuxmips64/ct-ng-config, images/base-linuxppc64/ct-ng-config, images/base-linuxriscv64/ct-ng-config
+- Seen in commit: 'Enable cross-gdb for cross-only toolchains'
+
